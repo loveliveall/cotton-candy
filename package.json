@@ -1,0 +1,23 @@
+{
+  "name": "cotton-candy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "genHtml": "rm -rf dist && static-i18n -l ko -i ko -i en -i ja -o ./dist www && cp ./background_*.png dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://loveliveall@github.com/loveliveall/cotton-candy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loveliveall/cotton-candy/issues"
+  },
+  "homepage": "https://github.com/loveliveall/cotton-candy#readme",
+  "dependencies": {
+    "static-i18n": "^0.2.8"
+  }
+}

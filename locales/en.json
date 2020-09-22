@@ -1,0 +1,18 @@
+{
+  "html": {
+    "lang": "en"
+  },
+  "head": {
+    "title": "Cotton Candy Ei-Ei-Oh! Repeat",
+    "meta": {
+      "description": "A website for repeating Cotton Candy Ei-Ei-Oh! Special MV and showing status of view"
+    }
+  },
+  "body": {
+    "title": "Cotton Candy Ei-Ei-Oh!",
+    "countPrefix": "",
+    "countSuffix": "times Cotton-Candy-ed",
+    "secondsPrefix": "",
+    "secondsSuffix": "seconds Cotton-Candy-ing now"
+  }
+}
