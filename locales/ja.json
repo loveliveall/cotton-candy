@@ -1,0 +1,18 @@
+{
+  "html": {
+    "lang": "ja"
+  },
+  "head": {
+    "title": "コットンキャンディえいえいおー！リピート",
+    "meta": {
+      "description": "コットンキャンディえいえいおー！Special MVを繰り返し再生し再生状態を示すサイト"
+    }
+  },
+  "body": {
+    "title": "コットンキャンディえいえいおー！",
+    "countPrefix": "",
+    "countSuffix": "回コットンキャンディしました",
+    "secondsPrefix": "現在",
+    "secondsSuffix": "秒コットンキャンディしています"
+  }
+}

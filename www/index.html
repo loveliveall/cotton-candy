@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html data-attr-t lang-t="html.lang">
   <head>
-    <title>コットンキャンディえいえいおー！リピート</title>
-    <meta name="description" content="">
+    <title data-t="head.title"></title>
+    <meta charset="utf-8">
+    <meta name="description" data-attr-t content-t="head.meta.description">
     <meta name="robots" content="index, noarchive, noimageindex">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no">
+    <link rel="alternate" hreflang="ko" href="/" />
+    <link rel="alternate" hreflang="en" href="/en/" />
+    <link rel="alternate" hreflang="ja" href="/ja/" />
   </head>
   <style>
     html, body {
@@ -14,6 +18,12 @@
     body {
       display: flex;
       flex-direction: column;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    select {
+      margin: 8px;
     }
     .number {
       font-weight: bolder;
@@ -41,19 +51,26 @@
   </style>
   <body>
     <main>
-      <h1>꼬뜬 깬디 에이! 에이! 오!</h1>
+      <h1 data-t="body.title"></h1>
+      <div>
+        <select id="language" onchange="if (this.value) location.href=(this.value);">
+          <option value="/en/">English</option>
+          <option value="/ja/">日本語</option>
+          <option value="/">한국어</option>
+        </select>
+      </div>
       <div id="player"></div>
       <div id="stats">
         <div class="inline">
           <div>
-            지금까지
+            <span data-t="body.countPrefix"></span>
             <span id="play-count" class="number">0</span>
-            번 꼬뜬깬디 함
+            <span data-t="body.countSuffix"></span>
           </div>
           <div>
-            지금
+            <span data-t="body.secondsPrefix"></span>
             <span id="play-time" class="number">0.0</span>
-            초 째 꼬뜬깬디 중
+            <span data-t="body.secondsSuffix"></span>
           </div>
         </div>
       </div><!-- hitwebcounter Code START -->
@@ -62,6 +79,13 @@
     </main>
     <footer>All rights reserved to プロジェクトラブライブ！サンシャイン!!</footer>
     <script>
+      document.getElementById('language').selectedIndex = (() => {
+        if (location.pathname === "/en/") return 0;
+        if (location.pathname === "/ja/") return 1;
+        if (location.pathname === "/") return 2;
+        return 0;
+      })();
+
       var playCount = 0;
       var playTime = 0; // In deciseconds
       var intervalId = null;
@@ -123,7 +147,7 @@
       // Set background type
       const BACKGROUND_COUNT = 4;
       const bgIdx = Math.floor(Math.random() * BACKGROUND_COUNT + 1);
-      document.body.style.backgroundImage = `url('./background_${`00${bgIdx}`.slice(-2)}.png')`;
+      document.body.style.backgroundImage = `url('/background_${`00${bgIdx}`.slice(-2)}.png')`;
       document.body.style.backgroundSize = '320px 180px';
     </script>
   </body>

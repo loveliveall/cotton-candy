@@ -1,0 +1,18 @@
+{
+  "html": {
+    "lang": "ko"
+  },
+  "head": {
+    "title": "코튼 캔디 에이 에이 오! 반복",
+    "meta": {
+      "description": "코튼 캔디 에이 에이 오! Special MV의 반복 재생 및 재생 상태를 보여주는 사이트"
+    }
+  },
+  "body": {
+    "title": "코튼 캔디 에이 에이 오!",
+    "countPrefix": "지금까지",
+    "countSuffix": "번 꼬뜬깬디 함",
+    "secondsPrefix": "지금",
+    "secondsSuffix": "초 째 꼬뜬깬디 중"
+  }
+}
