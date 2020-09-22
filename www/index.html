@@ -19,6 +19,12 @@
       display: flex;
       flex-direction: column;
     }
+    h1 {
+      margin-bottom: 0;
+    }
+    select {
+      margin: 8px;
+    }
     .number {
       font-weight: bolder;
       font-size: x-large;
@@ -46,6 +52,13 @@
   <body>
     <main>
       <h1 data-t="body.title"></h1>
+      <div>
+        <select id="language" onchange="if (this.value) location.href=(this.value);">
+          <option value="/en/">English</option>
+          <option value="/ja/">日本語</option>
+          <option value="/">한국어</option>
+        </select>
+      </div>
       <div id="player"></div>
       <div id="stats">
         <div class="inline">
@@ -66,6 +79,13 @@
     </main>
     <footer>All rights reserved to プロジェクトラブライブ！サンシャイン!!</footer>
     <script>
+      document.getElementById('language').selectedIndex = (() => {
+        if (location.pathname === "/en/") return 0;
+        if (location.pathname === "/ja/") return 1;
+        if (location.pathname === "/") return 2;
+        return 0;
+      })();
+
       var playCount = 0;
       var playTime = 0; // In deciseconds
       var intervalId = null;
